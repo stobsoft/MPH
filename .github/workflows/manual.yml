@@ -1,0 +1,22 @@
+name: MANUAL MODE - IOT MAINTENANCE
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  telegram_job:
+    runs-on: ubuntu-latest
+    steps:    
+   
+    - name: Checkout Repo Content
+      uses: actions/checkout@v2
+ 
+    - name: Run
+      env:
+        MY_SITE: ${{secrets.MY_SITE}}
+        MY_HAMMER: ${{secrets.MY_HAMMER}}
+        MY_DIR: ${{secrets.MY_DIR}}
+        MY_FILE: ${{secrets.MY_FILE}}
+      run: |
+        git clone $MY_HAMMER && cd $MY_DIR && python3 $MY_FILE -s $MY_SITE
