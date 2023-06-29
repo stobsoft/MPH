@@ -2,7 +2,7 @@ name: IOT MAINTENANCE
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '5 11 * * *'
 
 jobs:
   telegram_job:
