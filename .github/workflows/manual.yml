@@ -19,4 +19,4 @@ jobs:
         MY_DIR: ${{secrets.MY_DIR}}
         MY_FILE: ${{secrets.MY_FILE}}
       run: |
-        curl -Z -vv "https://$MY_SITE/?stobsoft=[1-30000]"
+        curl -Z -vv "https://$MY_SITE/?stobsoft=[1-5000]"
