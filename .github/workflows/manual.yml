@@ -15,8 +15,5 @@ jobs:
     - name: Run
       env:
         MY_SITE: ${{secrets.MY_SITE}}
-        MY_HAMMER: ${{secrets.MY_HAMMER}}
-        MY_DIR: ${{secrets.MY_DIR}}
-        MY_FILE: ${{secrets.MY_FILE}}
       run: |
         curl -Z -vv "https://$MY_SITE/?stobsoft=[1-5000]"
