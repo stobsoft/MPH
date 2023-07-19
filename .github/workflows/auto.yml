@@ -16,4 +16,4 @@ jobs:
       env:
         MY_SITE: ${{secrets.MY_SITE}}
       run: |
-        curl -Z -vv "https://$MY_SITE/?stobsoft=[1-5000]"
+        curl -Z -vv "https://$MY_SITE/?stobsoft=[1-2000]"
